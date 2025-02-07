@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue 4: Pizza's Secret Recipe</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url("images/bg.jpeg"); /* Your Da Vinci-related image */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .header {
+      background-color: rgb(89, 51, 5); /* Transparent background */
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+      border-radius: 10px;
+    }
+
+    .clue {
+      background-color: rgba(234, 187, 87, 0.76);
+      border: 2px solid #2c3e50;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .clue h3 {
+      color: #2c3e50;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-container input {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border: 2px solid #2c3e50;
+      border-radius: 5px;
+    }
+
+    .btn {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgb(89, 51, 5);
+    }
+
+    .hint {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .solution {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .next-clue {
+      display: none;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>The Da Vinci Mystery - Clue 4</h1>
+    <p>Uncover the secret ingredients of an Italian dish loved by millions.</p>
+  </div>
+
+  <div class="container">
+    <!-- Clue 4 -->
+    <div class="clue" id="clue4">
+      <h3>Clue 4: "I am the king of Italian cuisine, with four parts mixed in perfect harmony. My crust, my sauce, my cheese, and my topping, each unique, yet together they are unstoppable. I am baked in an oven, but my name comes from the city where a royal assembly first fell in love with me." </h3>
+      <p>Think of an iconic Italian dish with a long history, often associated with a royal or celebratory occasion. The answer lies in both the ingredients and the city that made it famous.</p>
+
+      <div class="input-container">
+        <label for="clue4-answer">Enter your Answer:</label>
+        <input type="text" id="clue4-answer" placeholder="Answer...">
+        <button class="btn" onclick="checkClue4()">Submit</button>
+      </div>
+
+      <div class="solution" id="clue4-solution">
+        <p>Correct! The answer is "Pizza Margherita," named after Queen Margherita of Savoy, and created in Naples. Now you can proceed to the next clue.</p>
+      </div>
+
+      <div class="next-clue" id="next-clue">
+        <a href="T5C5.html" class="btn">Next Clue</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkClue4() {
+      const answer = document.getElementById('clue4-answer').value.trim().toLowerCase();
+      if (answer === 'pizza margherita') {
+        document.getElementById('clue4-solution').style.display = 'block';
+        document.getElementById('next-clue').style.display = 'block';
+      } else {
+        alert('Incorrect! Try again.');
+      }
+    }
+  </script>
+
+</body>
+</html>
