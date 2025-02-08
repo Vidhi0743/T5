@@ -101,22 +101,9 @@
     <div class="clue" id="clue3">
       <h3>Clue 3: Fibonacci Sequence Puzzle</h3>
       <p>Decode the hidden message by using the Fibonacci sequence.</p>
-      <p>"Da Vinci, a master of secrets, wove a phrase into numbers, guarded by the Fibonacci sequence. Decipher his code to uncover his hidden message.
-        Here's the encoded sequence: 10 6 15 9 16 16 22 8 5 3 16 4 6<br>
-        The key is the Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233...
-        Subtract each Fibonacci number from the corresponding number in the sequence.<br>
-        Example:
-        First number in the sequence: 10<br>
-        First Fibonacci number: 1<br>
-        10 - 1 = 9<br>
-        Continue this process for all numbers in the sequence.<br>
-        Important:<br>
-        If a number is less than 1 after subtraction, add 26 until it's within the range of 1-26.<br>
-        If the result is greater than 26, subtract 26 until it's within 1-26.<br>
-        With A=1, B=2, C=3..., translate the resulting numbers into letters. You might also need to shift these decoded letters to achieve its real value.
-        <br>What phrase did Da Vinci conceal?"</p>
-      
-      
+      <p>Here's the encoded sequence: 6 4 7 5 10 6</p>
+      <p>The key is the Fibonacci sequence: 1, 1, 2, 3, 5, 8...</p>
+      <p>Subtract each Fibonacci number from the corresponding number in the sequence. Then, translate the resulting numbers into letters (1 = A, 2 = B, etc.).</p>
 
       <div class="input-container">
         <label for="clue3-answer">Enter the decoded message:</label>
@@ -124,7 +111,7 @@
         <button class="btn" onclick="checkClue3()">Submit</button>
         <p class="hint" id="clue3-hint">Hint: Apply Fibonacci numbers (1, 1, 2, 3, 5...) to decode the letters.</p>
       </div>
-      <div class="solution" id="clue3-solution">Correct! The decoded message is "SING ON THE CODE". Now, on to the next clue!</div>
+      <div class="solution" id="clue3-solution">Correct! The decoded message is "GREAT". Now, on to the next clue!</div>
       <div class="next-clue" id="next-clue3">
         <a href="T5C4.html" class="btn">Next Clue</a>
       </div>
@@ -134,7 +121,7 @@
   <script>
     function checkClue3() {
       const answer = document.getElementById('clue3-answer').value.toUpperCase();
-      if (answer === 'SING ON THE CODE') {
+      if (answer === 'GREAT') {
         document.getElementById('clue3-solution').style.display = 'block';
         document.getElementById('next-clue3').style.display = 'block';
       } else {
